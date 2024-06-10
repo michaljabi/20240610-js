@@ -25,29 +25,42 @@ function sumTwoNumbers(a, b) {
 // Call and assignment of the returned value from function:
 const result = sumTwoNumbers(10, 20)
 
+result; //=
 
 // #1 Task:
 // Show the addition result of 10 + 20 on the screen
-
+console.log(10 + 20);
+console.log(result);
+console.log(sumTwoNumbers(10, 20));
 
 // #2 Task:
 // Count how many is 30 + 560
-
+console.log(sumTwoNumbers(30, 560));
 
 // #3 Task:
 // What if we want to count 450 + 200 + 100?
+console.log(sumTwoNumbers(sumTwoNumbers(450, 200), 100));
+// more readable:
 
+const parial = sumTwoNumbers(450, 200);
+console.log(sumTwoNumbers(parial, 100));
 
 
 /* ---------------------- */
 // Functions after 2015 may have default parameters:
 
 function greetings(user = 'Admin') {
+
+	console.log(typeof user)
+
 	console.log('Hello', user)
 }
 
 // #4 Task:
 // try to call greetings with arguments and no argument, what will happen?
+greetings();
+// greetings(undefined);
+greetings('Michal')
 
 
 // #5 Task:
