@@ -9,8 +9,27 @@ block
 comment
 
 */
+function logMeNumbers(a0nything_$IWant0, b) {
 
-console.log('Welcome in JS world', 100 + 4 * 5);
+    console.log('!?!?@', b)
+
+    console.log(b + 10)
+
+}
+
+console.log('Welcome in JS world', 100 + 4 * 5, "!", "?\nhello");
+console.log("hello");
+
+const a = 100 + 4 * 5;
+
+// JSON.parse(';')
+
+console.log(a);
+
+logMeNumbers(1, 0.3)
+logMeNumbers(1, 20.3)
+logMeNumbers(3, 0.3)
+
 
 /*
 
