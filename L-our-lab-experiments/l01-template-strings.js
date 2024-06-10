@@ -26,7 +26,7 @@ console.log('You added ' + numA + ' to ' + numB + '.\nThe result is: ' + sum + '
 console.log(`You added ${numA} to ${numB}.
 The result is: ${sum}!`);
 
-console.log(`Another example ${20 + 30 * 2}`)
+// console.log(`Another example ${20 + 30 * 2}`)
 
 // MORE:
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
