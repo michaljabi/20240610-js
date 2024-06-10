@@ -9,20 +9,21 @@
 */
 
 // first string:
-let helloWorld = 'Hello World'
+const helloWorld = 'Hello World'
 console.log(helloWorld, 'is:', typeof helloWorld)
 
 // then number:
-helloWorld = 12333
-console.log(helloWorld, 'is:', typeof helloWorld)
+const myNumber = 12333
+console.log(myNumber, 'is:', typeof myNumber)
 
 // then boolean:
-helloWorld = true
-console.log(helloWorld, 'is:', typeof helloWorld)
+const myFlag = true
+console.log(myFlag, 'is:', typeof myFlag)
 
 // then undefined:
-helloWorld = undefined
-console.log(helloWorld, 'is:', typeof helloWorld)
+// const sample = undefined;
+let sample;
+console.log(sample, 'is:', typeof sample)
 
 // # 1 Task:
 // Refactor - change the above entries to the correct code
