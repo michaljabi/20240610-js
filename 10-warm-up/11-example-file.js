@@ -13,9 +13,12 @@ function logMeNumbers(a0nything_$IWant0, b) {
 
     console.log('!?!?@', b)
 
+
     console.log(b + 10)
 
 }
+
+console.log(typeof logMeNumbers)
 
 console.log('Welcome in JS world', 100 + 4 * 5, "!", "?\nhello");
 console.log("hello");

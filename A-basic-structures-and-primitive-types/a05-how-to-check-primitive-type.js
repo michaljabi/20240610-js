@@ -32,6 +32,8 @@ console.log(typeof myUndefined) // undefined
 // A special simple type that cannot be previewed with the "typeof" operator
 console.log(typeof mySecretVar6) // null - NOTE to typeof in this case it shows "object"
 
+console.log(mySecretVar6 !== null && typeof mySecretVar6 !== 'object');
+
 // null in this case (as object) is obviously a mistake - bug. Which, due to backward compatibility, stayed in JS.
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof#typeof_null
 
@@ -48,9 +50,10 @@ console.log(typeof {})
 console.log(typeof [])
 console.log(typeof new Date())
 console.log(typeof new RegExp('\d', 'g'))
-
+//BUG exiting in JS:
+console.log(typeof null);
 
 // Addition:
 // typeof can only help us with functions (which are in fact a special objects in JS):
-console.log(typeof function(){} ) // function
+console.log(typeof function () { }) // function
 
