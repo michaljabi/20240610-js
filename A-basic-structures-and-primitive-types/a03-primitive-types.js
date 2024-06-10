@@ -9,8 +9,9 @@
 
 // Primitives:
 console.log('example', '- is a string')
-console.log(1, '- is a number')
-console.log(1n, '- is a bigint')
+console.log(1, '- is a number') // largest 2 ^ 52 - 1 
+console.log(1n, '- is a bigint') 
+//console.log(1n + 1n) //
 console.log(true, '- is a boolean')
 console.log(Symbol(), '- is a symbol')
 console.log(null, '- is a null')

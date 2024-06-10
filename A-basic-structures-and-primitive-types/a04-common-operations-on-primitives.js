@@ -1,6 +1,8 @@
 // STRINGS
 // ----------------------------------------------------------------------------------------------
 // Common operations on strings:
+const myString = 'hello world'
+
 console.log('connect' + ' two ' + 'strings');
 console.log(myString + '😎');
 
@@ -13,6 +15,7 @@ console.log(myString.charAt(4));
 console.log('Hello World'.charAt(6));
 console.log('Hello World'.slice(-5));
 console.log('Ha'.repeat(10));
+//console.log('Ha' * 10);
 console.log(String.fromCharCode(65));
 
 // strings in JavaScript are indexed collections, so you can use indexes to extract single char from string:
@@ -34,14 +37,17 @@ console.log('Multiplication', 4.3 * 2);
 console.log('Divide', 4 / 2);
 console.log('Exponentiation', 4 ** 2);
 // we need to use the built-in JS native for square root: Math.sqrt ();
-console.log ('remainder from division', 80 % 3);
+console.log('remainder from division', 80 % 3);
 
-console.log ('Order of operations :)', 2 + 2 * 2);
+console.log('Order of operations :)', 2 + 2 * 2);
 
 // Examples, built-in methods:
+const myNumber = 10.912340;
+
 console.log('>> NUMBERS:');
 console.log(myNumber.toFixed(3));
 console.log(Number.isInteger(2.3));
+console.log(Number.isInteger(2));
 console.log(Number.parseInt('00110001111101', 2));
 console.log(Number.parseInt('00110001111101', 10));
 // more: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number
@@ -51,8 +57,8 @@ console.log(Number.parseInt('00110001111101', 10));
 // Common operations on boolean:
 console.log('Comparison:', true === true)
 console.log('OR:', false || true)
-console.log('AND:',true && false)
-console.log('NOT:',!false)
+console.log('AND:', true && false)
+console.log('NOT:', !false)
 
 // Common operations resulting as a boolean:
 console.log('Result is:', 10 > 220);
@@ -60,6 +66,12 @@ console.log('Result is:', 10 <= 220);
 console.log('Result is:', 10 + 300 < 220);
 
 // Example built-in method:
+const myBoolean = true
 console.log('>> BOOLEANS:');
 console.log(myBoolean.toString());
 // more: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+
+// Type casting
+console.log(Boolean('hello'))
+console.log(Number('89'))
+console.log(String(2939191))
