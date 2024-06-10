@@ -10,20 +10,23 @@
  * See how console.log behaves and shows from line 28
  *
  * */
+"use strict";
 
-const myColor = 'red';
+myColor = 'red';
+// globalThis.myColor = 'sth'
+console.log(globalThis.myColor);
 
 function inception() {
 	const myColor = 'cristal';
 
 	function secondDream() {
-		const myColor = 'sapphire';
+		//const myColor = 'sapphire';
 
 		function thirdDream() {
-			const myColor = 'emerald';
+			//const myColor = 'emerald';
 
 			function fourthDream() {
-				const myColor = 'diamond';
+				//const myColor = 'diamond';
 
 				console.log(myColor);
 			}

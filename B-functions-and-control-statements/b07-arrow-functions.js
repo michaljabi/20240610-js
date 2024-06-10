@@ -17,22 +17,49 @@ Arrow functions, apart from the abbreviated text, add a few more things:
 
 // ES6 + news (after 2015):
 // we get Arrow functions:
-const newFunc = ( name ) => `Hello ${name}!`;
+const newFunc = (name) => `Hello ${name}!`;
 const newFunc2 = name => `Hello ${name}!`;
-const newFunc3 = ( name ) => {
+const newFunc3 = (name) => {
+
+
+    // 
+
     return `Hello ${name}!`;
 };
+
+console.log(newFunc('Michal'));
+console.log(newFunc2('Katie'));
+console.log(newFunc3('Basia'));
+
 
 // Reminder:
 // A function can return another function:
 function hello() {
-    return () => 'World';
+    return function () {
+        return 'World'
+    }
 }
+
+// same as:
+/*
+function hello() {
+    return () => 'World'
+}
+*/
 
 const innerFn = hello();
 // # 2 Task:
 // How do I get the "World" result?
+console.log(innerFn())
 
+console.log(hello()())
+
+// Arrow function is helpful in some use-cases:
+// setTimeout(() => {
+
+//     console.log('DEMO')
+
+// }, 3000)
 
 /*
 

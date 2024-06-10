@@ -13,6 +13,7 @@ const myNumbersArray = [ 1, 2, 33, 44, 55, 3, 1 ];
 // Mapping
 // Element transformation
 const mapped = [1,2,3,4,5].map((nr) => 'Chapter #'+nr);
+console.log(mapped)
 
 // Filtering
 // Changing the number of elements (shorten)
