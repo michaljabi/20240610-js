@@ -16,24 +16,40 @@
 
 console.log('Program starts...');
 
-const MyHello = 'Hello';
+
+let MyHello = ''; // dood practice (convention)
 console.log(MyHello, 'World')
 
-MyHello = 'Serious';
+
+console.log(MyHello.charAt(1));
+MyHello = 'Hello';
+
+console.log(MyHello.toString())
+// console.log(MyHello * 90)
+// console.log(MyHello + 90)
+// console.log(MyHello / 0)
+
+console.log(Infinity === Infinity);
+
+console.log(MyHello.charAt(0));
+
+console.log(globalThis.MyHello)
+console.log(globalThis === global);
+
 const help = "HelpMe out"
 console.log(help + ' right now!'); // HelpMe out right now!
 
-let do = true;
-const LARGE-number = 2048
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words
+let done = true;
+const LARGE_NUMBER = 2048
 
-here, it supposes to be comment - that addNumber will return number
+// here, it supposes to be comment - that addNumber will return number
 function addNumbers(a, b) {
 	return a + b
 }
 
 let result;
 result = addNumbers(10, 20);
-
 console.log('Result is:', result);
 
 console.log('You reached the end! - BRAVO')
