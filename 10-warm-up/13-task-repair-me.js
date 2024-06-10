@@ -17,7 +17,7 @@
 console.log('Program starts...');
 
 
-let MyHello = ''; // dood practice (convention)
+let MyHello = ''; // good practice (convention)
 console.log(MyHello, 'World')
 
 
@@ -48,8 +48,7 @@ function addNumbers(a, b) {
 	return a + b
 }
 
-let result;
-result = addNumbers(10, 20);
+const result = addNumbers(10, 20);
 console.log('Result is:', result);
 
 console.log('You reached the end! - BRAVO')
