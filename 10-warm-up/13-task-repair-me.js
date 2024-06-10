@@ -44,11 +44,20 @@ let done = true;
 const LARGE_NUMBER = 2048
 
 // here, it supposes to be comment - that addNumber will return number
-function addNumbers(a, b) {
+function addNumbers(a = 0, b = 0) {
 	return a + b
 }
 
 const result = addNumbers(10, 20);
 console.log('Result is:', result);
+
+console.log(addNumbers(10))
+addNumbers(10); //=
+
+addNumbers(10, undefined); //=
+addNumbers(10); //=
+
+console.log(10 + undefined);
+console.log(10 + 0);
 
 console.log('You reached the end! - BRAVO')
