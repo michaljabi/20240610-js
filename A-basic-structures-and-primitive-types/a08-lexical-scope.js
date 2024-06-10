@@ -13,20 +13,24 @@
 // Example: There cannot be situation where you will declare 2 variables with the same name
 // in the same scope
 
-let someText = 'Hello';
+// let someText = 'Hello';
+// let someText = 'I am inside of other scope';
+
+
 // uncomment line below to see the error:
 // let someText = 'ok';
 // ^ SyntaxError: Identifier 'someText' has already been declared (18:4)
 
 // But when I create new block-scope, with curly braces:
-{
+if (true) {
 	// This is legal (we got the same name, but in other scope)
-	let someText = 'I am inside of other scope';
+	var someText = 'I am inside of other scope';
 
 	// You got access to local scope
 	console.log(someText)
 }
 
 // In outer scope:
+// That is a BUG - because var leak out the scope.....
 console.log(someText)
 
