@@ -1,6 +1,6 @@
 // First lets see once again what value parameter have, if no argument is provided:
-function shoutMyName(name) {
-	return 'Your name is: ' + name;
+function shoutMyName(name, name2) {
+	return 'Your name is: ' + name + ' ' + name2;
 }
 
 // NOTE: no argument provided, and it is not an error 🤔...
@@ -30,7 +30,7 @@ console.log(otherResult);
 // The only time when you do not have to put any arguments, when call a function
 // is when this function has defined "default" parameters:
 
-function giveFavouriteNumber(no = 77) {
+function giveFavouriteNumber(no = 70) {
 	return no;
 }
 
@@ -46,8 +46,10 @@ console.log(giveFavouriteNumber(987))
 const outer = 567;
 
 function showOuter() {
-	 console.log(outer);
+	console.log(outer);
 }
+
+console.log(outer);
 
 showOuter()
 
