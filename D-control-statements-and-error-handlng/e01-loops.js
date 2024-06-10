@@ -30,7 +30,7 @@ do {
 //
 
 // most common use:
-for(let x = 10; x <= 15; x++) {
+for(let x = 10; x <= 12; x+=2) {
 	console.log('count up...', x);
 }
 
@@ -39,7 +39,7 @@ for(let x = 3; x >= 0; x--) {
 }
 
 // loop that will never execute:
-for(;false;) {
+for(;true;) {
 	  console.log('FOR NEVER !')
 }
 

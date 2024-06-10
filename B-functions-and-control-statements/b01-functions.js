@@ -13,12 +13,18 @@
 * Name of the function is a verb - and you separate words using theCamelCase
  */
 
+let x = 10;
+
+
 // Declaration:
 function sayHello() {
+	// let x = 20;
 	console.log('Hello!')
+	// console.log(x);
 }
 
 // Call:
+sayHello()
 sayHello()
 
 
@@ -26,6 +32,37 @@ sayHello()
 // How To Quickly Repeat These Entries 4 Times On The Screen:
 // we want to see 4 boxes one below the other
 
+function showBox() {
+	console.log('  ____________')
+	console.log('|  in the BOX  |')
+	console.log('  ------------')
+}
+
+showBox()
+showBox()
+showBox()
+showBox()
+
+
+// using loop
+// solution:
+for (let x = 0; x < 4; x++) {
+	console.log('  ____________')
+	console.log('|  in the box  |')
+	console.log('  ------------')
+}
+
+/*
 console.log('  ____________')
 console.log('|  in the box  |')
 console.log('  ------------')
+
+console.log('  ____________')
+console.log('|  in the box  |')
+console.log('  ------------')
+
+console.log('  ____________')
+console.log('|  in the box  |')
+console.log('  ------------')
+*/
+
