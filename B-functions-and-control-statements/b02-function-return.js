@@ -4,8 +4,12 @@
  */
 
 // Declaration:
-function giveMeTheName() {
+function giveMeTheName(name = '') {
 	// Function can return only one thing at a time:
+	// if (typeof name === 'string' && name.toLowerCase() === 'michal') {
+	if (name.toLowerCase() === 'michal') {
+		return 'Sth else'
+	}
 	return 'Kendra'
 }
 
@@ -17,6 +21,7 @@ console.log(name);
 
 // We can also write this as:
 console.log(giveMeTheName())
+console.log(giveMeTheName('MIchAL'))
 
 
 
