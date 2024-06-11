@@ -16,7 +16,8 @@ let numbersStr = '';
 const numbers = [];
 
 for (let x = 1; x <= 10; x++) {
-    numbersStr = numbersStr + ' ' + x;
+    // numbersStr = numbersStr + ' ' + x;
+    numbersStr += ' ' + x;
     numbers.push(x);
 }
 
