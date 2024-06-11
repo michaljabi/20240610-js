@@ -61,22 +61,75 @@ console.log(basketValue);
 // be DRY -> Dont Repeat Yourself
 // you are WET -> Write Everything Twice
 
-function makeShoppingCartItem(name, price = 0, tax = 0.23) {
+function makeShoppingCartItem(name, price = 0, tax = 0.23, currency = 'PLN') {
 	return {
 		name,
 		price,
 		tax,
+		currency,
+		getCurrency() {
+			return currency;
+		},
 		fullPrice() {
+			// this.currency;
 			return this.price * this.tax + this.price;
 		}
 	}
 }
 
-const shoppingCartItem3 = makeShoppingCartItem('Sample', 300) //=
+const shoppingCartItem3 = makeShoppingCartItem('Sample', 300, 0.23, 'EUR') //=
 const shoppingCartItem4 = makeShoppingCartItem('Sample 2', 100) //=
 
+shoppingCartItem3.currency = 'TROLL'
+
 console.log(shoppingCartItem3.fullPrice())
+console.log(`${shoppingCartItem3.fullPrice()} ${shoppingCartItem3.getCurrency()}`)
 
 // # 3 Show that initializing two new empty objects after comparing === will give us false.
 // Even when they got the same properties and values (!!!)
 // Explain why this is happening?
+
+console.log(1 === 1)
+console.log('?' === '?')
+
+const obj1 = {};
+const obj2 = obj1;
+
+console.log(obj1 === obj2);
+// console.log(({} === {}))
+
+obj1.name = 'Michal';
+
+// obj1 = {};
+
+console.log(obj1);
+console.log(obj2);
+
+delete obj2.name;
+
+console.log(obj1);
+
+
+
+
+
+const user = { age: 23, name: 'Anna', address: {} }
+
+function removeTheAge(exampleUser = { age: 0, name: '', address: {}} ) {
+	// always use parameters as read only (when parameter expects Complex type)
+	const userCopy = exampleUser
+	// That will repair the code (Shallow copy of the object):
+	// const userCopy = { ...exampleUser }
+	delete userCopy.age;
+	return userCopy;
+}
+
+console.log(user)
+
+const user2 = removeTheAge(user);
+console.log(user2)
+
+console.log(user)
+
+console.log(user === user2)
+console.log(user.address === user2.address)
