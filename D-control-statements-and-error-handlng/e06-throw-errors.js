@@ -10,7 +10,7 @@
  */
 
 function multiplyBy10(num) {
-	 return num * 10;
+	return num * 10;
 }
 
 // Pretty simple right?
@@ -30,14 +30,36 @@ console.log(multiplyBy10('hello'))
 // That is why, sometimes it's handy to GUARD, against those situations, like that:
 
 function multiplyBy20(num) {
-	if(typeof num !== 'number') {
+	if (typeof num !== 'number') {
 		throw new Error('You need to provide a number!');
+		console.log('!')
 	}
 	return num * 20;
 }
 
+try {
+	JSON.parse('{ "name": "Michal"; }') //=
+} catch (e) {
+	console.log('Sorry invalid JSON')
+	console.log(e.message)
+}
+
 // You WILL NEED to comment line below - to se how try - catch works later in this example
-console.log(multiplyBy20('hello'));
+try {
+	const num = multiplyBy20('');
+	console.log('do sth', num)
+	console.log('I will not fire')
+	console.log('I will not fire')
+	console.log('I will not fire')
+	console.log('I will not fire')
+	console.log('send the form if everything is ok')
+} catch (e) {
+	console.log(e.message);
+
+} finally {
+	console.log('I will always fire')
+}
+
 
 console.log('This console log, won\'t work');
 
