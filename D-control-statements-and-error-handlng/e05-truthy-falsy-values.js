@@ -26,6 +26,11 @@ if(NaN) {
 	console.log('I am working !')
 }
 
+if({}) {
+	console.log('I am working !')
+}
+
+
 if(1 === '1') {
 	console.log('I am working !')
 }

@@ -26,12 +26,20 @@
 */
 let numericCondition = 0;
 
-if(numericCondition === 1) {
+if (numericCondition === 1) {
+	// let ex = 10;
 	console.log('if !')
-} else if (numericCondition){
+
+} else if (numericCondition) {
+
+
 	console.log('else if !')
+
 } else {
+
+	//console.log(ex);
 	console.log('else !?')
+
 }
 
 /*
@@ -39,13 +47,16 @@ if(numericCondition === 1) {
 */
 const x = 100;
 const higherThen10 = x > 10;
-const hello = higherThen10 ? 'hello' : 'goodbye';
+console.log(higherThen10);
 
+const hello = higherThen10 ? 'hello2' : 'goodbye';
+
+console.log(hello);
 
 /*
 		Switch
 */
-switch(hello) {
+switch (hello) {
 	case 'hello':
 		console.log('logic for hello...');
 		break;
@@ -65,3 +76,9 @@ switch(hello) {
 // depending on the weather variable which can take the values "windy" and "sunny"
 // use the ternary operator
 
+let weather = 'windy';
+
+console.log('take a', weather === 'windy' ? 'coat' : 't-shirt')
+
+// under the hood:
+console.log('take a', 'coat')
