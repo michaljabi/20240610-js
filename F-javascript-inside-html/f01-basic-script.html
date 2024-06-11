@@ -1,9 +1,18 @@
-<script>
-    let x = 1;
+<script type="module">
+    export let x = 1;
     x++;
     console.log('Hello !', x);
 
+    console.log(Math.PI);
+    console.dir(document.body);
+
+    document.body.style.backgroundColor = 'red'
+
     // To actually see this code in action you need to open Browser Dev Tools (press F12 in the Browser)
+</script>
+<script>
+    import { x } from './'
+    console.log('I also have this', x)
 </script>
 <!--
 
