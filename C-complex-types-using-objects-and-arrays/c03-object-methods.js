@@ -15,6 +15,9 @@
 const cat = {
 	whiskers: 'long',
 	eyes: 2,
+	voice(a) {
+		return 'Mrauuu';
+	},
 	voice() {
 		return 'Mrauuu';
 	},
@@ -23,8 +26,7 @@ const cat = {
 
 // #1 Task:
 // Show the voice method output on the console
-
-
+console.log(cat.voice('!'))
 
 
 // More examples:
@@ -47,11 +49,16 @@ console.log(myUser['name'])
 // Assign a new object to a constant - check and prove that:
 // a) You cannot have several fields with the same name in an object
 // b) If such a situation occurs then "the value of the last field wins"
+const mySample = {
+	example: 1,
+	example: 200
+}
 
+console.log(mySample)
 
 
 // Except dynamic saving, you can "get" to all fields of the object - thanks to the for ... in loop
-for(let key in myUser) {
+for (let key in myUser) {
 	console.log(key);
 }
 
