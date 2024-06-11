@@ -9,7 +9,7 @@ const helloWorld = "hello World!";
 // helping hand?
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 
-function sayH() {
+function shoutFirstAndLast() {
     console.log(helloWorld)
     console.log(helloWorld[0])
     console.log(helloWorld[helloWorld.length - 1])
@@ -24,6 +24,6 @@ function sayH() {
     console.log(helloWorld.substring(0, 1) + helloWorld.substring(11))
 }
 
-sayH();
+shoutFirstAndLast();
 
 
