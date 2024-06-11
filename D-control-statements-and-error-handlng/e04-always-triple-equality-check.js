@@ -17,6 +17,8 @@ const otherOne = 1;
 const on = true;
 const off = false;
 
+console.log(one != on);
+console.log(one !== on); // NOT equal as !== (triple)
 
 if (one === on) {
   console.log('Hello one is on !');
