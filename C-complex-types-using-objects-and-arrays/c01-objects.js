@@ -14,8 +14,19 @@ console.log(myUser2);
 
 // A simple example of an object:
 const user = {
-	name: 'Marek'
+	name: 'Marek',
+	// lastName: ''
 };
+
+function makeUser(name2 = 'Katie') { // factory function
+	return {
+		name: name2
+	};
+}
+console.log(makeUser('Mark'))
+console.log(makeUser('Jarek'))
+console.log(makeUser('Michal'))
+console.log(makeUser())
 
 console.log(user);
 
@@ -34,6 +45,10 @@ console.log(theName);
 // What will happen, when property does not exist:
 console.log(user.age);
 console.log(user.age === undefined);
+
+// Soren question (CAN I LOCK the object to not be dynamically extendable?)
+// Answer is yes:
+Object.freeze(user);
 
 // But, JavaScript is also dynamic in case of objects
 // We can define NEW object fields (properties):
