@@ -22,6 +22,7 @@ const oddNumbers = [1,2,3,4,5].filter((nr) => (nr%2));
 // Check the condition
 // Each element satisfies a predicate
 const allLowerThan10 = [1,2,3,4,5].every((nr) => nr < 10);
+console.log(allLowerThan10);
 
 // "Reduce" elements
 // Where map and filter might not be beneficial, reduce will be useful
@@ -44,6 +45,8 @@ mutableArray.unshift('x');
 
 // “taking out” the first element:
 mutableArray.shift();
+
+mutableArray.sort();
 
 
 // search indexes, elements, etc.
