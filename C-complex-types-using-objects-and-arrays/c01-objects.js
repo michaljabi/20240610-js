@@ -4,6 +4,14 @@
 * without the need to define plans of its structure like in other object-oriented languages - which use classes.
 */
 
+// In other Langs YOU HAVE TO do like that:
+const myUser = new Object();
+// syntax with so called object literal
+const myUser2 = {};
+
+console.log(myUser);
+console.log(myUser2);
+
 // A simple example of an object:
 const user = {
 	name: 'Marek'
@@ -12,6 +20,9 @@ const user = {
 console.log(user);
 
 // Access to property inside object:
+console.log(user.name);
+console.log(typeof user.name);
+
 console.log(user.name);
 
 // assign value of the object property to other variable / constant:
@@ -36,3 +47,31 @@ user.name = 'Katie';
 
 console.log(user);
 console.log(user.name);
+
+
+// OOP Way:
+class User {
+
+	myName = 'Henry';
+	#myPrivate = 'secret key';
+
+	constructor() {
+		console.log(this.#myPrivate)
+	}
+
+	showMeYourSecret() {
+		return this.#myPrivate
+	}
+}
+
+const classDoesNotChangeDynamic = new User();
+
+classDoesNotChangeDynamic.lastName = 'Kowalsky'
+
+console.log(classDoesNotChangeDynamic)
+
+console.log(new User().myName);
+// console.log(new User().myPrivate);
+// console.log(new User().#myPrivate);
+
+console.log(new User().showMeYourSecret());
