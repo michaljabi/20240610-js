@@ -18,15 +18,28 @@ const on = true;
 const off = false;
 
 
-if ( one == on ) {
-  console.log( 'Hello one is on !' );
+if (one === on) {
+  console.log('Hello one is on !');
 }
 
-if ( [] == off ) {
-  console.log( 'hello' );
+if ([] === off) {
+  console.log('hello');
 }
 
-if ( otherOne == one ) {
-  console.log( 'Hello World' );
+if (otherOne === one) {
+  console.log('Hello World');
 }
+
+// This is why we do not want to MIX the types !!!
+console.log(1 + '1')
+console.log(1 + 1 + '1')
+console.log('1' + 1 + 1)
+
+
+
+
+
+
+
+
 
