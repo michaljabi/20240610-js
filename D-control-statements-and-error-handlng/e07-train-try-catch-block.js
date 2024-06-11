@@ -13,15 +13,23 @@
  */
 
 function divide(a, b) {
-	if (b === 0){
-		throw new Error(`Cannot divide by ${b}!`)
-	}
+
+    // JSON.parse(';')
+    if (b === 0) {
+        throw new Error(`Cannot divide by ${b}!`)
+    }
     return a / b;
 }
 
 // Solve here:
-console.log(divide(20, 2))
-console.log(divide(20, 0))
+try {
+    console.log(divide(20, 2))
+    console.log(divide(20, 0))
+
+    console.log('I will not work')
+} catch (e) {
+    console.log(e.message);
+}
 
 
 
