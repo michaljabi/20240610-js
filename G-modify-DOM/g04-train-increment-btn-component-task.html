@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Increment Button as Component</title>
@@ -17,6 +18,7 @@
         }
     </style>
 </head>
+
 <body>
     <div id="root"></div>
 
@@ -34,9 +36,25 @@
          *   Place whole logic to achieve this effect inside this script.
          *
          * */
-         const root = document.querySelector('#root');
+        const root = document.querySelector('#root');
 
+        // const btnIns = new HTMLButtonElement();
+        const button = document.createElement('button');
+        button.dataset.counter = '';
+
+        let x = 1;
+        button.addEventListener('click', () => {
+            button.innerText = ++x;
+        })
+        button.innerText = x;
+
+        root.append(button)
+
+        console.log(button instanceof Element)
+        console.log(button instanceof HTMLElement)
+        console.log(button instanceof HTMLButtonElement)
 
     </script>
 </body>
+
 </html>
