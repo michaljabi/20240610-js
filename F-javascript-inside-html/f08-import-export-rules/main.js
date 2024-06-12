@@ -17,3 +17,5 @@ console.log(greetings('John'))
 
 const header = changeHeader('I changed the header...')
 header.style.color = redColor
+
+header.setAttribute('title', 'Hello from ')
