@@ -12,5 +12,40 @@
 console.log({} instanceof Array);
 
 console.log([] instanceof Array);
+console.log([] instanceof Object);
+
 console.log({} instanceof Object);
+
 console.log(new Date() instanceof Date);
+console.log(new Date() instanceof Object);
+
+
+console.log((() => { }) instanceof Function);
+console.log((() => { }) instanceof Object);
+
+console.log(Array === Object);
+
+
+class MySample {
+    name = 'Sample'
+}
+
+console.log(new MySample() instanceof MySample);
+console.log(new MySample() instanceof Object);
+
+
+console.log(new MySample())
+console.log(new MySample().toString())
+
+console.log(JSON.stringify(new MySample()))
+
+const instance = new MySample();
+console.log(instance.constructor.name)
+
+/// because in JS
+function helloWorld() {
+    return '!'
+}
+
+console.log(helloWorld.name)
+console.log(helloWorld())
