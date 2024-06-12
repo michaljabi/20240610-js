@@ -1,27 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>g02 DOM Node or Element</title>
 </head>
-<body>
 
+<body>
+    <!-- <p>
+        Hello <span>hhh</span>
+    </p> -->
     <script>
         /**
          * This website body is empty, even if you do this:
          * */
 
-        const headerOne = document.createElement('h1');
-        headerOne.innerText = 'Hello Text'
+        function makeHader(text = 'Hello Text') {
+            const headerOne = document.createElement('h1');
+            headerOne.innerText = text
+            // headerOne.style.display = 'inline'
+            return headerOne;
+        }
+
+
+        // console.log(headerOne)
+
 
         // This will not be rendered on the DOM.
         // That is because, it is an Element and a proper Object, but We did not append it to <body> element yet !
 
         // To do so, you need to uncomment line below
-        // document.body.appendChild(headerOne)
+        // document.body.appendChild('HELLo')
+        document.body.appendChild(makeHader('Other text'))
+        document.body.appendChild(makeHader())
+        document.body.appendChild(makeHader())
+
 
         // You can also do it that way (if you want to add multiple Elements as next arguments)
-        // document.body.append(headerOne)
+        document.body.append(
+            'HELLo',
+            makeHader('APPEND'),
+            makeHader('APPEND'),
+            makeHader('APPEND'),
+            makeHader('APPEND'),
+            makeHader('APPEND'),
+        )
 
         // From now on, when element is on the DOM it will become a part of the DOM Node Tree.
 
@@ -36,4 +59,5 @@
          * */
     </script>
 </body>
+
 </html>
