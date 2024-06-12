@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Increment Button</title>
@@ -17,7 +18,9 @@
         }
     </style>
 </head>
+
 <body>
+    <button data-counter>1</button>
     <button data-counter>1</button>
 
     <script>
@@ -31,7 +34,29 @@
          *
          *   Place whole logic to achieve this effect inside this script.
          * */
+        // button.innerText =
+        // button.textContent =
+        const btn = document.querySelector('button[data-counter]')
 
+        let x = 1;
+        btn.addEventListener('click', () => {
+            btn.innerText = ++x;
+        })
+
+        // Many counters - same state:
+        /*
+        const btns = document.querySelectorAll('button[data-counter]');
+
+        btns.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                x++;
+                btns.forEach((btn) => {
+                    btn.innerText = x;
+                })
+            })
+        })
+        */
     </script>
 </body>
+
 </html>
