@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>f09 Task: use ESM way of JS work</title>
 </head>
+
 <body>
 
     <h4>List of my favourite fruits</h4>
     <ul data-list>
 
     </ul>
+    <script>
+        const fruits = ['apples', 'bananas', 'mangoes', 'cherries'];
+
+        const u1 = document.querySelector('[data-list]');
+
+        for (const fruit of fruits) {
+            u1.innerHTML += `<li>${fruit}</li>`
+        }
+    </script>
     <!--
 
         #f09 Task:
@@ -28,6 +39,9 @@
             - finally add them as "ul[data-list]" element .innerHTML - to pretty print as bullet list
 
             - include src=`./main.js` here as a script - it should be type="module" !
+
+            ul.innerHTML = '<li>...</li>'
     -->
 </body>
+
 </html>
