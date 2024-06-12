@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -11,17 +12,23 @@
             background-color: #4fb2ff;
             cursor: pointer;
         }
+
         #clicker:hover {
             background-color: #0e48ff;
             color: #ffffff;
         }
+
+        [data-btn] {
+            background-color: #0e48ff;
+        }
     </style>
 </head>
+
 <body>
-    <div>
+    <div data-btn>
         <button id="clicker"> Don't click me! </button>
     </div>
-    <div>
+    <div data-wrapper>
         <button data-btn> Don't click me 2! </button>
     </div>
     <script>
@@ -35,9 +42,28 @@
          * @see: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
          * */
 
+        const allBtn = document.querySelectorAll('[data-btn]');
 
+        console.dir(allBtn);
+
+        Array.from(allBtn).filter(el => el.tagName === 'BUTTON').forEach(el => {
+            el.innerHTML = '<strong>TROLL</strong>'
+        })
+
+        // allBtn.forEach((el) => {
+        //     el.innerHTML = '<strong>TROLL</strong>'
+        //     console.dir(el)
+        // })
+
+        console.log(allBtn)
+
+        const wrapper = document.querySelector('[data-wrapper]');
+
+        wrapper.querySelector('[data-btn]').addEventListener('click', () => {
+            console.log('IT WILL WORK')
+        })
         document.querySelector('#clicker').addEventListener('click', () => {
-        	console.log('I said - do not click me !')
+            console.log('I said - do not click me !')
         })
 
         document.querySelector('[data-btn]').addEventListener('click', () => {
@@ -49,17 +75,18 @@
         *   and using constants, to increase code readability
         *  */
 
-        const button1 =  document.querySelector('button#clicker');
+        const button1 = document.querySelector('button#clicker');
         button1.addEventListener('click', () => {
             // nothing happens after click, but this button1 reference is for the same object as:
             // document.querySelector('#clicker')
         })
 
-        const button2 =  document.querySelector('button[data-btn]');
+        const button2 = document.querySelector('button[data-btn]');
         button2.addEventListener('click', () => {
             // nothing happens after click, but this button1 reference is for the same object as:
             // document.querySelector('[data-btn]')
         })
     </script>
 </body>
+
 </html>

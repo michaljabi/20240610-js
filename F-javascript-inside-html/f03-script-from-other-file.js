@@ -10,6 +10,10 @@
 const testMe = 'Hello from shared scope 🤪'
 
 
-function handleConfirm() {
+function handleConfirm(event) {
     alert('Order 2024/06/10 confirmed !')
+    console.log(event)
 }
+
+// It is better to use addEventListener in favor of 
+// document.querySelector('button').addEventListener('click', handleConfirm)
